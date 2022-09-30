@@ -1,0 +1,21 @@
+{
+  "name": "proyecto-4",
+  "version": "1.0.0",
+  "description": "Pagina materias",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "type": "module",
+  "author": "Adrian Enrique Valdivia Cabañas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mariadb": "^3.0.1",
+    "pug": "^3.0.2",
+    "sequelize": "^6.21.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

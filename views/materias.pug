@@ -1,0 +1,18 @@
+extends ./layout/index.pug 
+block compartircontenido 
+    h1.text-center #{pagina}
+    h2.text-center Plan 2020
+    main.container.mt-5
+        .row 
+            each materia in materias 
+                .col-md.col-lg-4.nv-4
+                    .card.shadow.p-3.mb-5.bg-body.rounded(style='width: 18rem;')
+                        img.card-img-top(src=`img/${materia.imagen}` alt='Imagen De Materia')
+                        .card-body
+                            h5.card-title=materia.nombre
+                            p.card-text
+                            | #{materia.descripcion}
+                            br
+                            br
+                            br
+                            button(href='#',class='btn btn-success btn-clock') Más Datos     

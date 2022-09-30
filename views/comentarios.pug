@@ -1,0 +1,30 @@
+extends ./layout/index.pug 
+block compartircontenido
+    main.container.mt-5 
+        h1.text-center.mt-5 #{pagina}
+        .row
+            .col-md-12
+                h2.d-block.w-100.text-center Agregar Comentarios 
+                if (errores)
+                    each error in errores 
+                        .alert.col.alert-danger.text-center=error.mensaje
+            .row.justify-content-center.col 
+                .col-md-8
+                    form.padding-formulario(action="/comentarios", method="POST")
+                        .form-group 
+                            label(for="id") #ID
+                            input#correo(type="text", placeholder="ID" name="id"
+                            ,class="form-control", value=id, required,readonly="readonly")
+                        .form-group 
+                            label(for="correo") Correo 
+                            input#correo(type="email", placeholder="tucorreo@dominio.extension" name="correo"
+                            ,class="form-control", value=correo, required)
+                        .form-group 
+                            label(for="imagen") Imagen 
+                            input#imagen(type="text", placeholder="Sube tu imagen" name="imagen"
+                            ,class="form-control", value=imagen, required)
+                        .form-group 
+                            label(for="opinion") Opinion
+                            textarea#opinion(type="text", placeholder="Queremos saber tu opinion" name="opinion"
+                            ,class="form-control", row=3, required)=opinion 
+                        input.btn.btn-success.btn-block(type="submit")        

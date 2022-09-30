@@ -1,0 +1,125 @@
+footer {
+    background-color: #B7CFDC;
+    padding: 19%;
+    position: relative;
+    bottom: 0;
+}
+
+.navegacion {
+    background-color: #02424e;
+}
+
+header .nav a {
+    font-family: 'Staatliches', cursive;
+    font-size: 2rem;
+    color: white;
+}
+
+.lista-iconos {
+    background-color: rgb(245, 245, 245);
+}
+.lista-iconos img {
+    height: 100px;
+}
+
+.bg-propio {
+    background-color: #1C3C56;
+    color: #C69C50;
+    height: 75px;
+    font-weight: bold;
+}
+
+.dorado {
+    color: #C69C50;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.navbar ul li a {
+    position: relative;
+}
+
+.navbar ul li a::before,
+.navbar ul li a::after {
+    width: 40px;
+    position: absolute;
+    border-bottom: 2px solid #8EA0AC;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.navbar ul li a::before {
+    content: '';
+    bottom: 6px;
+    right: 20px;
+    width: 90%;
+}
+
+.navbar ul li a::after {
+    content: "";
+    bottom:-4px;
+    left: 20px;
+    width: 60%;
+}
+
+.navbar ul li a:hover::before {
+    opacity: 1;
+    width: 70%;
+}
+
+.navbar ul li a:hover::after {
+    opacity: 1;
+    width: 40%;
+}
+
+.estilo-links {
+    color: #93BBDC;
+    font-weight: bold;
+    font-size: larger;
+}
+
+a:hover {
+    color: #5292C7;
+    transition: 0.4s;
+}
+
+.fondo-img {
+    background-image: url("../img/inicio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+}
+
+.texto-principal {
+    text-align: center;
+    color: #fff;
+}
+
+.texto-footer {
+    color: #AAA692;
+}
+
+.fondo-principal {
+    background-color: #93BBDC;
+}
+
+.padding-principal {
+    padding-top: 10%;
+}
+
+.padding-formulario {
+    padding-bottom: 10%;
+}
+
+.botones-tarjetas {
+    position: relative;
+    bottom: 0;
+}
+
+body {
+    background-color: #E7F7FB;
+}
+
+.texto-creadores {
+    text-align: center;
+}

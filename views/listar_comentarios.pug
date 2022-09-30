@@ -1,0 +1,18 @@
+extends ./layout/index.pug 
+block compartircontenido
+    main.container.mt-5 
+        h1.text-center.mt-5 #{pagina}
+        .row
+            each comentario in comentarios
+                    .col-md.col-lg-4.nv-4
+                        .card.shadow.p-3.mb-5.bg-body.rounded(style='width: 18rem;')
+                            img.card-img-top(src=`img/${comentario.imagen}` alt='Imagen De Comentario')
+                            .card-body
+                                h5.card-title=comentario.correo
+                                p.card-text
+                                | #{comentario.opinion}
+                                br
+                                |
+                                a(href=`/modificar?id=${comentario.id}`,class='btn btn-warning btn-clock') Modificar
+                                | 
+                                a(href=`/eliminar?id=${comentario.id}`,class='btn btn-danger btn-clock') Eliminar
